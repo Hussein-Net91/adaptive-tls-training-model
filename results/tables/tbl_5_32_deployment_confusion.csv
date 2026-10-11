@@ -1,0 +1,4 @@
+index,pred Good,pred Medium,pred Bad
+true Good,5803,105,0
+true Medium,203,5496,199
+true Bad,0,89,5817

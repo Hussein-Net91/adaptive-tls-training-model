@@ -1,0 +1,6 @@
+band,file,rows_read,dropped_latency,dropped_payload,dropped_throughput,dropped_clock_mismatch,rows_kept,clock_MHz
+20 MHz,client-20.csv,16830,0,0,0,0,16830,20
+40 MHz,client-40.csv,17127,0,0,0,80,17047,40
+90 MHz,client-90.csv,21440,0,0,0,0,21440,90
+180 MHz,client-180.csv,16354,0,0,0,0,16354,180
+360 MHz,client-360.csv,16887,0,0,0,0,16887,360

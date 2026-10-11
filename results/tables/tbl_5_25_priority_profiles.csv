@@ -1,0 +1,5 @@
+profile,agreement_with_P0,accuracy_weighted_scaling,accuracy_plain_scaling,top_drivers
+P0 baseline,1.0,0.9817073170731707,0.9817073170731707,"cycles_per_bit, cycles_mean, latency"
+P1 latency-led,0.9543124280132794,0.9840221318879856,0.9840221318879856,"cycles_per_bit, cycles_mean, latency"
+P2 footprint-led,0.41546782899342805,0.9800135501355014,0.9800135501355014,"Flash_used, cycles_per_bit, cycles_mean"
+P3 uniform,0.7307640190609545,0.9805216802168022,0.9805216802168022,"cycles_per_bit, cycles_mean, latency"

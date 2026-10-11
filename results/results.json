@@ -1,0 +1,700 @@
+{
+  "model_families": [
+    {
+      "model": "Random forest (100)",
+      "accuracy": 0.9840221318879856,
+      "balanced_accuracy": 0.9840168613853968,
+      "f1_macro": 0.9840093592207452,
+      "cohen_kappa": 0.9760331632242005,
+      "fit_seconds": 6.39,
+      "predict_ms_per_record": 0.0062,
+      "inversions": 0,
+      "deployment": "arrays, no truncation"
+    },
+    {
+      "model": "XGBoost (200)",
+      "accuracy": 0.9808604336043361,
+      "balanced_accuracy": 0.9808539752239956,
+      "f1_macro": 0.9808419104725653,
+      "cohen_kappa": 0.9712906007142464,
+      "fit_seconds": 3.19,
+      "predict_ms_per_record": 0.0043,
+      "inversions": 0,
+      "deployment": "arrays, truncatable"
+    },
+    {
+      "model": "LightGBM (200)",
+      "accuracy": 0.9791666666666666,
+      "balanced_accuracy": 0.9791587148907793,
+      "f1_macro": 0.9791357462885971,
+      "cohen_kappa": 0.9687499115436511,
+      "fit_seconds": 2.73,
+      "predict_ms_per_record": 0.0231,
+      "inversions": 0,
+      "deployment": "arrays, truncatable"
+    },
+    {
+      "model": "Gradient boosting",
+      "accuracy": 0.9775293586269196,
+      "balanced_accuracy": 0.9775203913572373,
+      "f1_macro": 0.9774869049262023,
+      "cohen_kappa": 0.9662939173907358,
+      "fit_seconds": 2.65,
+      "predict_ms_per_record": 0.0096,
+      "inversions": 0,
+      "deployment": "no exporter in this work"
+    },
+    {
+      "model": "k-NN (k=5)",
+      "accuracy": 0.9766824751580849,
+      "balanced_accuracy": 0.9766744649485858,
+      "f1_macro": 0.9766610895359036,
+      "cohen_kappa": 0.9650236147365595,
+      "fit_seconds": 0.01,
+      "predict_ms_per_record": 0.1875,
+      "inversions": 7,
+      "deployment": "stores the training set"
+    },
+    {
+      "model": "CatBoost (500)",
+      "accuracy": 0.9738595302619693,
+      "balanced_accuracy": 0.9738475377943175,
+      "f1_macro": 0.9737826199301858,
+      "cohen_kappa": 0.9607890771621281,
+      "fit_seconds": 10.49,
+      "predict_ms_per_record": 0.001,
+      "inversions": 0,
+      "deployment": "arrays, truncatable"
+    },
+    {
+      "model": "MLP (64,32)",
+      "accuracy": 0.9188685636856369,
+      "balanced_accuracy": 0.9188387856128051,
+      "f1_macro": 0.9185226846001475,
+      "cohen_kappa": 0.8783016398526959,
+      "fit_seconds": 62.59,
+      "predict_ms_per_record": 0.0028,
+      "inversions": 2,
+      "deployment": "weights, float matmul"
+    },
+    {
+      "model": "SVM (RBF)",
+      "accuracy": 0.8497628726287263,
+      "balanced_accuracy": 0.8497703563303111,
+      "f1_macro": 0.8521340959385005,
+      "cohen_kappa": 0.7746542583061271,
+      "fit_seconds": 94.01,
+      "predict_ms_per_record": 1.4463,
+      "inversions": 44,
+      "deployment": "stores support vectors"
+    },
+    {
+      "model": "Logistic regression",
+      "accuracy": 0.7455397470641373,
+      "balanced_accuracy": 0.7455613834629173,
+      "f1_macro": 0.7516106377937374,
+      "cohen_kappa": 0.6183407309752751,
+      "fit_seconds": 2.48,
+      "predict_ms_per_record": 0.0001,
+      "inversions": 64,
+      "deployment": "closed form, tiny"
+    },
+    {
+      "model": "Extra trees (100)",
+      "accuracy": 0.9859981933152665,
+      "balanced_accuracy": 0.9859937275420565,
+      "f1_macro": 0.9859893459301499,
+      "cohen_kappa": 0.9789972638629957,
+      "fit_seconds": 1.84,
+      "predict_ms_per_record": 0.0083,
+      "inversions": 1,
+      "deployment": "arrays, no truncation"
+    },
+    {
+      "model": "AdaBoost (200)",
+      "accuracy": 0.8183152664859982,
+      "balanced_accuracy": 0.8183187259719961,
+      "f1_macro": 0.8216891620389268,
+      "cohen_kappa": 0.7274856978225877,
+      "fit_seconds": 18.56,
+      "predict_ms_per_record": 0.0102,
+      "inversions": 6,
+      "deployment": "arrays, truncatable"
+    },
+    {
+      "model": "Gaussian naive Bayes",
+      "accuracy": 0.4280149051490515,
+      "balanced_accuracy": 0.4278489113022241,
+      "f1_macro": 0.3705761254207401,
+      "cohen_kappa": 0.14184285905923755,
+      "fit_seconds": 0.02,
+      "predict_ms_per_record": 0.0004,
+      "inversions": 3984,
+      "deployment": "closed form, tiny"
+    }
+  ],
+  "defaults": [
+    {
+      "configuration": "defaults, depth 6, rate 0.30",
+      "rounds": 100,
+      "accuracy": 0.9788843721770552,
+      "f1_macro": 0.9788494990235014,
+      "nodes": 22614,
+      "c_KiB": 627.6
+    },
+    {
+      "configuration": "defaults, depth 6, rate 0.30",
+      "rounds": 200,
+      "accuracy": 0.9808604336043361,
+      "f1_macro": 0.9808419104725653,
+      "nodes": 42610,
+      "c_KiB": 1197.2
+    }
+  ],
+  "best_config": {
+    "params": {
+      "max_depth": 8,
+      "learning_rate": 0.2,
+      "min_child_weight": 1,
+      "reg_lambda": 2.0
+    },
+    "cv_accuracy": 0.9807751881922592
+  },
+  "sweeps": {
+    "depth": [
+      {
+        "max_depth": 2,
+        "train_accuracy": 0.9012788301386105,
+        "hold_out_accuracy": 0.8964543812104788,
+        "withheld_band_mean": 0.834334430284407,
+        "nodes": 4188,
+        "c_KiB": 116.9
+      },
+      {
+        "max_depth": 3,
+        "train_accuracy": 0.9354656579058803,
+        "hold_out_accuracy": 0.934056007226739,
+        "withheld_band_mean": 0.8339610771819134,
+        "nodes": 8706,
+        "c_KiB": 239.5
+      },
+      {
+        "max_depth": 4,
+        "train_accuracy": 0.9576122858030094,
+        "hold_out_accuracy": 0.9546070460704607,
+        "withheld_band_mean": 0.8113268269929741,
+        "nodes": 16040,
+        "c_KiB": 446.4
+      },
+      {
+        "max_depth": 5,
+        "train_accuracy": 0.9742399006295345,
+        "hold_out_accuracy": 0.9676490514905149,
+        "withheld_band_mean": 0.7956588215054957,
+        "nodes": 28200,
+        "c_KiB": 791.3
+      },
+      {
+        "max_depth": 6,
+        "train_accuracy": 0.9840922564435536,
+        "hold_out_accuracy": 0.9758355916892503,
+        "withheld_band_mean": 0.7863807101306652,
+        "nodes": 45468,
+        "c_KiB": 1282.0
+      },
+      {
+        "max_depth": 8,
+        "train_accuracy": 0.9930835897580668,
+        "hold_out_accuracy": 0.9800700090334237,
+        "withheld_band_mean": 0.7839374099786085,
+        "nodes": 96154,
+        "c_KiB": 2730.5
+      }
+    ],
+    "learning_rate": [
+      {
+        "max_depth": 4,
+        "learning_rate": 0.03,
+        "hold_out_accuracy": 0.9108514001806685,
+        "f1_macro": 0.9109957864515659
+      },
+      {
+        "max_depth": 6,
+        "learning_rate": 0.03,
+        "hold_out_accuracy": 0.9448396567299007,
+        "f1_macro": 0.9444453221128818
+      },
+      {
+        "max_depth": 4,
+        "learning_rate": 0.05,
+        "hold_out_accuracy": 0.9296522131887985,
+        "f1_macro": 0.9294957125294124
+      },
+      {
+        "max_depth": 6,
+        "learning_rate": 0.05,
+        "hold_out_accuracy": 0.9592931345980127,
+        "f1_macro": 0.9590671391654261
+      },
+      {
+        "max_depth": 4,
+        "learning_rate": 0.1,
+        "hold_out_accuracy": 0.9546070460704607,
+        "f1_macro": 0.9543824892671298
+      },
+      {
+        "max_depth": 6,
+        "learning_rate": 0.1,
+        "hold_out_accuracy": 0.9758355916892503,
+        "f1_macro": 0.9757854562563134
+      },
+      {
+        "max_depth": 4,
+        "learning_rate": 0.2,
+        "hold_out_accuracy": 0.9722786811201445,
+        "f1_macro": 0.9721909543171398
+      },
+      {
+        "max_depth": 6,
+        "learning_rate": 0.2,
+        "hold_out_accuracy": 0.979957091237579,
+        "f1_macro": 0.9799345166456614
+      },
+      {
+        "max_depth": 4,
+        "learning_rate": 0.3,
+        "hold_out_accuracy": 0.974875790424571,
+        "f1_macro": 0.9748254299000543
+      },
+      {
+        "max_depth": 6,
+        "learning_rate": 0.3,
+        "hold_out_accuracy": 0.9808604336043361,
+        "f1_macro": 0.9808419104725653
+      }
+    ]
+  },
+  "cross_validation": {
+    "accuracy": 0.9807752025520142,
+    "balanced_accuracy": 0.9807697868784956,
+    "f1_macro": 0.9807621589625745,
+    "f1_weighted": 0.980766734738707,
+    "cohen_kappa": 0.9711627724780612,
+    "mcc": 0.9711644323506962
+  },
+  "hold_out_test": {
+    "accuracy": 0.9817073170731707,
+    "balanced_accuracy": 0.9817013565562006,
+    "f1_macro": 0.9816919490512935,
+    "f1_weighted": 0.9816967307011009,
+    "cohen_kappa": 0.9725609352009449,
+    "mcc": 0.97256366954592,
+    "log_loss": 0.04708096385002136
+  },
+  "auc": {
+    "roc_auc": {
+      "Good": 0.9996470792293078,
+      "Medium": 0.998450056065695,
+      "Bad": 0.9996091069651314
+    },
+    "average_precision": {
+      "Good": 0.9992925204976814,
+      "Medium": 0.9970457794568028,
+      "Bad": 0.9992318380229087
+    }
+  },
+  "cross_band": [
+    {
+      "held_out_band": "20 MHz",
+      "train_records": 71728,
+      "test_records": 16830,
+      "accuracy": 0.655377302436126,
+      "balanced_accuracy": 0.6552784238550188,
+      "f1_macro": 0.6396527359600902
+    },
+    {
+      "held_out_band": "40 MHz",
+      "train_records": 71511,
+      "test_records": 17047,
+      "accuracy": 0.8805654953950842,
+      "balanced_accuracy": 0.8805114276903091,
+      "f1_macro": 0.8799275033819735
+    },
+    {
+      "held_out_band": "90 MHz",
+      "train_records": 67118,
+      "test_records": 21440,
+      "accuracy": 0.8207555970149254,
+      "balanced_accuracy": 0.8207412372206667,
+      "f1_macro": 0.8191755058654103
+    },
+    {
+      "held_out_band": "180 MHz",
+      "train_records": 72204,
+      "test_records": 16354,
+      "accuracy": 0.8317231258407729,
+      "balanced_accuracy": 0.831661483878862,
+      "f1_macro": 0.8307421371128547
+    },
+    {
+      "held_out_band": "360 MHz",
+      "train_records": 71671,
+      "test_records": 16887,
+      "accuracy": 0.694321075383431,
+      "balanced_accuracy": 0.6940840240023235,
+      "f1_macro": 0.6753982936489301
+    }
+  ],
+  "ablation": [
+    {
+      "feature_set": "A all features",
+      "n_features": 18,
+      "hold_out_accuracy": 0.9817073170731707,
+      "f1_macro": 0.9816919490512935,
+      "LOBO_180MHz": 0.8307447719212425,
+      "LOBO_20MHz": 0.6409387997623291,
+      "LOBO_360MHz": 0.6557707111979629,
+      "LOBO_40MHz": 0.8722942453217575,
+      "LOBO_90MHz": 0.8159514925373135,
+      "LOBO_mean": 0.7631400041481211
+    },
+    {
+      "feature_set": "B without build constants",
+      "n_features": 14,
+      "hold_out_accuracy": 0.9802393857271906,
+      "f1_macro": 0.980217967056296,
+      "LOBO_180MHz": 0.8267702091231502,
+      "LOBO_20MHz": 0.6387997623291741,
+      "LOBO_360MHz": 0.6891099662462249,
+      "LOBO_40MHz": 0.858684812576993,
+      "LOBO_90MHz": 0.8182369402985075,
+      "LOBO_mean": 0.7663203381148099
+    },
+    {
+      "feature_set": "C timing only",
+      "n_features": 12,
+      "hold_out_accuracy": 0.9677055103884372,
+      "f1_macro": 0.9676720045440187,
+      "LOBO_180MHz": 0.8394888100770453,
+      "LOBO_20MHz": 0.638680926916221,
+      "LOBO_360MHz": 0.7739089240243975,
+      "LOBO_40MHz": 0.858684812576993,
+      "LOBO_90MHz": 0.8032182835820896,
+      "LOBO_mean": 0.7827963514353493
+    },
+    {
+      "feature_set": "D clock-invariant work",
+      "n_features": 7,
+      "hold_out_accuracy": 0.9533649503161699,
+      "f1_macro": 0.9532204938186046,
+      "LOBO_180MHz": 0.8371040723981901,
+      "LOBO_20MHz": 0.8234105763517529,
+      "LOBO_360MHz": 0.7790608160123171,
+      "LOBO_40MHz": 0.8626151228955241,
+      "LOBO_90MHz": 0.8316231343283582,
+      "LOBO_mean": 0.8267627443972284
+    }
+  ],
+  "priority_profiles": [
+    {
+      "profile": "P0 baseline",
+      "agreement_with_P0": 1.0,
+      "accuracy_weighted_scaling": 0.9817073170731707,
+      "accuracy_plain_scaling": 0.9817073170731707,
+      "top_drivers": "cycles_per_bit, cycles_mean, latency"
+    },
+    {
+      "profile": "P1 latency-led",
+      "agreement_with_P0": 0.9543124280132794,
+      "accuracy_weighted_scaling": 0.9840221318879856,
+      "accuracy_plain_scaling": 0.9840221318879856,
+      "top_drivers": "cycles_per_bit, cycles_mean, latency"
+    },
+    {
+      "profile": "P2 footprint-led",
+      "agreement_with_P0": 0.41546782899342805,
+      "accuracy_weighted_scaling": 0.9800135501355014,
+      "accuracy_plain_scaling": 0.9800135501355014,
+      "top_drivers": "Flash_used, cycles_per_bit, cycles_mean"
+    },
+    {
+      "profile": "P3 uniform",
+      "agreement_with_P0": 0.7307640190609545,
+      "accuracy_weighted_scaling": 0.9805216802168022,
+      "accuracy_plain_scaling": 0.9805216802168022,
+      "top_drivers": "cycles_per_bit, cycles_mean, latency"
+    }
+  ],
+  "model_comparison": [
+    {
+      "model": "Majority class",
+      "accuracy": 0.3335591689250226,
+      "balanced_accuracy": 0.3333333333333333,
+      "f1_macro": 0.1667513406717471,
+      "cohen_kappa": 0.0
+    },
+    {
+      "model": "Decision tree (depth 4)",
+      "accuracy": 0.7443541102077688,
+      "balanced_accuracy": 0.7441953930544652,
+      "f1_macro": 0.7243410091283566,
+      "cohen_kappa": 0.6164857766033414
+    },
+    {
+      "model": "Random forest (100)",
+      "accuracy": 0.9840221318879856,
+      "balanced_accuracy": 0.9840168613853968,
+      "f1_macro": 0.9840093592207452,
+      "cohen_kappa": 0.9760331632242005
+    },
+    {
+      "model": "XGBoost (default)",
+      "accuracy": 0.9808604336043361,
+      "balanced_accuracy": 0.9808539752239956,
+      "f1_macro": 0.9808419104725653,
+      "cohen_kappa": 0.9712906007142464
+    },
+    {
+      "model": "XGBoost (tuned)",
+      "accuracy": 0.9817073170731707,
+      "balanced_accuracy": 0.9817013565562006,
+      "f1_macro": 0.9816919490512935,
+      "cohen_kappa": 0.9725609352009449
+    }
+  ],
+  "recommended": {
+    "depth": 6,
+    "params": {
+      "max_depth": 6,
+      "learning_rate": 0.3,
+      "min_child_weight": 1,
+      "reg_lambda": 2.0
+    },
+    "rounds": 80,
+    "accuracy": 0.9776987353206865,
+    "c_KB": 513.2
+  },
+  "max_accuracy": {
+    "depth": 6,
+    "params": {
+      "max_depth": 6,
+      "learning_rate": 0.3,
+      "min_child_weight": 1,
+      "reg_lambda": 2.0
+    },
+    "rounds": 300,
+    "accuracy": 0.9815943992773261,
+    "c_KB": 1786.2
+  },
+  "deployment_point": {
+    "config": "depth4",
+    "rounds": 100,
+    "trees": 300,
+    "nodes": 8034,
+    "c_KiB": 218.8,
+    "accuracy": 0.9664,
+    "f1_macro": 0.9662,
+    "fits_budget": true
+  },
+  "flash_budget": [
+    {
+      "flash_budget_KiB": 128,
+      "configuration": "depth3",
+      "rounds": 100,
+      "c_KiB": 117.8,
+      "hold_out_accuracy": 0.9475
+    },
+    {
+      "flash_budget_KiB": 256,
+      "configuration": "depth4",
+      "rounds": 100,
+      "c_KiB": 218.8,
+      "hold_out_accuracy": 0.9664
+    },
+    {
+      "flash_budget_KiB": 512,
+      "configuration": "depth5",
+      "rounds": 120,
+      "c_KiB": 471.4,
+      "hold_out_accuracy": 0.9766
+    },
+    {
+      "flash_budget_KiB": 1024,
+      "configuration": "depth6",
+      "rounds": 160,
+      "c_KiB": 998.1,
+      "hold_out_accuracy": 0.9811
+    },
+    {
+      "flash_budget_KiB": "unbounded",
+      "configuration": "depth6",
+      "rounds": 300,
+      "c_KiB": 1786.2,
+      "hold_out_accuracy": 0.9816
+    }
+  ],
+  "policy_outcomes": [
+    {
+      "policy outcome": "correct action",
+      "true tier": "any",
+      "records": 17388,
+      "rate_%": 98.17073170731707
+    },
+    {
+      "policy outcome": "missed switch (Bad read as Good)",
+      "true tier": "Bad",
+      "records": 0,
+      "rate_%": 0.0
+    },
+    {
+      "policy outcome": "spurious switch (Good read as Bad)",
+      "true tier": "Good",
+      "records": 0,
+      "rate_%": 0.0
+    },
+    {
+      "policy outcome": "under-reaction (Bad read as Medium)",
+      "true tier": "Bad",
+      "records": 84,
+      "rate_%": 1.4222824246528953
+    },
+    {
+      "policy outcome": "over-reaction (Medium read as Bad)",
+      "true tier": "Medium",
+      "records": 88,
+      "rate_%": 1.4920311970159377
+    },
+    {
+      "policy outcome": "needless adjustment (Good read as Medium)",
+      "true tier": "Good",
+      "records": 65,
+      "rate_%": 1.100203114421124
+    },
+    {
+      "policy outcome": "missed adjustment (Medium read as Good)",
+      "true tier": "Medium",
+      "records": 87,
+      "rate_%": 1.4750762970498474
+    }
+  ],
+  "deployment_hold_out": {
+    "accuracy": 0.9663504968383018,
+    "balanced_accuracy": 0.9663331231200355,
+    "f1_macro": 0.9661861746913963,
+    "f1_weighted": 0.966195031585114,
+    "cohen_kappa": 0.9495252828493338,
+    "mcc": 0.9496727995655742,
+    "log_loss": 0.10519245266914368
+  },
+  "deployment_cross_validation": {
+    "accuracy": 0.9658555176015583,
+    "balanced_accuracy": 0.9658428633083789,
+    "f1_macro": 0.9657610917273866,
+    "f1_weighted": 0.9657693062546349,
+    "cohen_kappa": 0.9487830272337299,
+    "mcc": 0.9488298994765049
+  },
+  "deployment": {
+    "depth": 4,
+    "rounds": 100,
+    "params": {
+      "max_depth": 4,
+      "learning_rate": 0.3,
+      "min_child_weight": 1,
+      "reg_lambda": 2.0
+    },
+    "trees": 300,
+    "nodes": 8034,
+    "c_KiB": 218.8,
+    "hold_out": {
+      "accuracy": 0.9663504968383018,
+      "balanced_accuracy": 0.9663331231200355,
+      "f1_macro": 0.9661861746913963,
+      "f1_weighted": 0.966195031585114,
+      "cohen_kappa": 0.9495252828493338,
+      "mcc": 0.9496727995655742,
+      "log_loss": 0.10519245266914368
+    },
+    "cross_validation": {
+      "accuracy": 0.9658555176015583,
+      "balanced_accuracy": 0.9658428633083789,
+      "f1_macro": 0.9657610917273866,
+      "f1_weighted": 0.9657693062546349,
+      "cohen_kappa": 0.9487830272337299,
+      "mcc": 0.9488298994765049
+    },
+    "roc_auc": {
+      "Good": 0.9986846631978372,
+      "Medium": 0.9949299625143723,
+      "Bad": 0.9988395185995698
+    },
+    "lobo_mean": 0.8062226338232531,
+    "export_dir": "models/deployment_depth4_r100"
+  },
+  "baseline_c": {
+    "accuracy": 0.9809,
+    "c_KB": 1197.2
+  },
+  "dataset": {
+    "records": 88558,
+    "features": [
+      "lat_per_byte",
+      "E_lat_per_byte",
+      "cycles_per_bit",
+      "throughput",
+      "Energy",
+      "stack_per_msg",
+      "latency",
+      "E_latency",
+      "cycles_mean",
+      "payload_size",
+      "heap_per_msg",
+      "Flash_used",
+      "Ex_code",
+      "rodata",
+      "total_memory",
+      "cv_latency",
+      "lat_per_byte_std",
+      "E_lat_per_byte_std"
+    ],
+    "label_scope": "per_freq_payload",
+    "bands": [
+      "180 MHz",
+      "20 MHz",
+      "360 MHz",
+      "40 MHz",
+      "90 MHz"
+    ],
+    "ciphers": [
+      "AES-128-GCM",
+      "ASCON-128",
+      "ChaCha20-Poly1305",
+      "GIFT-COFB",
+      "Grain-128AEADv2",
+      "Null-AEAD (SHA256)",
+      "Schwaemm",
+      "TinyJAMBU"
+    ],
+    "energy_proxy_mW": 90.0
+  },
+  "feature_order": [
+    "lat_per_byte",
+    "E_lat_per_byte",
+    "cycles_per_bit",
+    "throughput",
+    "Energy",
+    "stack_per_msg",
+    "latency",
+    "E_latency",
+    "cycles_mean",
+    "payload_size",
+    "heap_per_msg",
+    "Flash_used",
+    "Ex_code",
+    "rodata",
+    "total_memory",
+    "cv_latency",
+    "lat_per_byte_std",
+    "E_lat_per_byte_std"
+  ]
+}

@@ -1,0 +1,3 @@
+subset,records,Good,Medium,Bad,share_%
+training,70846,23629,23593,23624,80.0
+test,17712,5908,5898,5906,20.0

@@ -1,0 +1,18 @@
+# Raw benchmark captures (published separately on Zenodo)
+client-*.csv
+data/
+
+# Generated outputs
+chapter5_out/
+chapter5_bundle.zip
+
+# Python / Jupyter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db

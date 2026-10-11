@@ -1,0 +1,6 @@
+flash_budget_KiB,configuration,rounds,c_KiB,hold_out_accuracy
+128,depth3,100,117.8,0.9475
+256,depth4,100,218.8,0.9664
+512,depth5,120,471.4,0.9766
+1024,depth6,160,998.1,0.9811
+unbounded,depth6,300,1786.2,0.9816

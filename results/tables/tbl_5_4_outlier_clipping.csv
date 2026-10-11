@@ -1,0 +1,12 @@
+feature,values_clipped,share_%
+latency,3837,4.33
+lat_per_byte,3836,4.33
+E_lat_per_byte,2671,3.02
+E_latency,2670,3.01
+throughput,1258,1.42
+cycles_per_bit,2847,3.21
+cycles_mean,2847,3.21
+Energy,2847,3.21
+stack_per_msg,3725,4.21
+heap_per_msg,3316,3.74
+total_memory,21826,24.65

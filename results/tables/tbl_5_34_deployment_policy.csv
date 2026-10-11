@@ -1,0 +1,8 @@
+policy outcome,true tier,deployment_records,deployment_rate_%,cv_winner_rate_%
+correct action,any,17116,96.63504968383018,98.17073170731707
+missed switch (Bad read as Good),Bad,0,0.0,0.0
+spurious switch (Good read as Bad),Good,0,0.0,0.0
+under-reaction (Bad read as Medium),Bad,89,1.5069420927869963,1.4222824246528953
+over-reaction (Medium read as Bad),Medium,199,3.3740250932519498,1.4920311970159377
+needless adjustment (Good read as Medium),Good,105,1.7772511848341233,1.100203114421124
+missed adjustment (Medium read as Good),Medium,203,3.4418446931163102,1.4750762970498474
